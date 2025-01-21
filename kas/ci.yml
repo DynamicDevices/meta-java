@@ -15,8 +15,6 @@ local_conf_header:
 
   Yocto Sstate cache: |
     BB_SIGNATURE_HANDLER = "OEEquivHash"
-    BB_HASHSERVE = "auto"
-    BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
     SSTATE_MIRRORS:append = " file://.* https://sstate.yoctoproject.org/all/PATH;downloadfilename=PATH"
 
   Yocto Source mirror: |
