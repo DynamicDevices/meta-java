@@ -1,0 +1,38 @@
+header:
+  version: 14
+
+local_conf_header:
+  reduce_diskspace: |
+    INHERIT += "rm_work_and_downloads"
+
+  Strip down unneeded features: |
+    POKY_DEFAULT_DISTRO_FEATURES:remove = "ptest"
+    POKY_DEFAULT_DISTRO_FEATURES:remove = "wayland"
+    DISTRO_FEATURES_DEFAULT:remove = "x11"
+    DISTRO_FEATURES:append = " systemd usrmerge"
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED = "sysvinit"
+
+  Yocto Sstate cache: |
+    BB_SIGNATURE_HANDLER = "OEEquivHash"
+    BB_HASHSERVE = "auto"
+    BB_HASHSERVE_UPSTREAM = "hashserv.yocto.io:8687"
+    SSTATE_MIRRORS:append = " file://.* https://sstate.yoctoproject.org/all/PATH;downloadfilename=PATH"
+
+  Yocto Source mirror: |
+    MIRRORS:append = "\
+      git://.*/.* https://downloads.yoctoproject.org/mirror/sources/ \
+      ftp://.*/.* https://downloads.yoctoproject.org/mirror/sources/ \
+      http://.*/.* https://downloads.yoctoproject.org/mirror/sources/ \
+      https://.*/.* https://downloads.yoctoproject.org/mirror/sources/"
+
+  diskmon: |
+    BB_DISKMON_DIRS = "\
+        STOPTASKS,${TMPDIR},100M,100K \
+        STOPTASKS,${DL_DIR},100M,100K \
+        STOPTASKS,${SSTATE_DIR},100M,100K \
+        STOPTASKS,/tmp,100M,100K \
+        HALT,${TMPDIR},10M,1K \
+        HALT,${DL_DIR},10M,1K \
+        HALT,${SSTATE_DIR},10M,1K \
+        HALT,/tmp,10M,1K"

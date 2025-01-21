@@ -1,0 +1,33 @@
+header:
+  version: 14
+
+distro: poky
+target: openjdk-8-test-image
+
+repos:
+  meta-java:
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    branch: master
+    layers:
+      meta:
+      meta-poky:
+
+  meta-openembedded:
+    url: http://git.openembedded.org/meta-openembedded
+    branch: master
+    layers:
+      meta-oe:
+
+local_conf_header:
+
+  preferred_providers: |
+    # Possible provider: cacao-initial-native and jamvm-initial-native
+    PREFERRED_PROVIDER_virtual/java-initial-native = "cacao-initial-native"
+
+    # Possible provider: cacao-native and jamvm-native
+    PREFERRED_PROVIDER_virtual/java-native = "jamvm-native"
+
+    # Optional since there is only one provider for now
+    PREFERRED_PROVIDER_virtual/javac-native = "ecj-bootstrap-native"
