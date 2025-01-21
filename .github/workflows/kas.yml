@@ -51,4 +51,3 @@ jobs:
         path: |
           sstate
         key: ${{ steps.cache-sstate-restore.outputs.cache-primary-key }}
-
