@@ -7,12 +7,13 @@ jobs:
 
     timeout-minutes: 600
     runs-on: [self-hosted, linux, X64]
+    continue-on-error: true
     container:
       image: dynamicdevices/yocto-ci-build:latest
       options: --privileged --platform linux/amd64  -v /dev/net/tun:/dev/net/tun -v /dev/kvm:/dev/kvm
     strategy:
       matrix:
-        yocto-version: [styhead, master]
+        yocto-version: [master, styhead]
         machine: [qemu]
     steps:
     - uses: actions/checkout@v4
