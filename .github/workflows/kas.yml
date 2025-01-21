@@ -16,10 +16,6 @@ jobs:
         machine: [qemu]
     steps:
     - uses: actions/checkout@v4
-    - name: Install Kas
-      run: |
-        sudo pip3 install kas
-
     - name: Restore sstate cache
       id: cache-sstate-restore
       uses: actions/cache/restore@v4
