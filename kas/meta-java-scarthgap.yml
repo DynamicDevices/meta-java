@@ -1,0 +1,12 @@
+header:
+  version: 14
+
+  includes:
+    - meta-java-master.yml
+
+repos:
+  poky:
+    branch: scarthgap
+
+  meta-openembedded:
+    branch: scarthgap
