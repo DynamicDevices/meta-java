@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         yocto-version: [master, styhead, scarthgap, kirkstone]
-        machine: [qemu]
+        machine: [qemuarm64]
     steps:
     - uses: actions/checkout@v4
     - name: Restore sstate cache
