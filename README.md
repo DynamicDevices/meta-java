@@ -31,7 +31,7 @@ Guides on how to contribute to meta-java are described in CONTRIBUTING.md.
 | Branch    | Version   | Support Status* | Status of Build & Tests |
 | ------    | -------   | --------------- | ----------------------- |
 | walnascar | 5.2       | Active Development | Waiting on Poky branch |
-| styhead   | 5.1       | Future | [![styhead](https://img.shields.io/github/actions/workflow/status/dynamicdevices/meta-java/kas.yml?branch=styhead&label=build%20%26%20test)](https://github.com/DynamicDevices/meta-java/actions/workflows/kas.yml) |
+| styhead   | 5.1       | Support until May 2025 | [![styhead](https://img.shields.io/github/actions/workflow/status/dynamicdevices/meta-java/kas.yml?branch=styhead&label=build%20%26%20test)](https://github.com/DynamicDevices/meta-java/actions/workflows/kas.yml) |
 | scarthgap | 5.0       | Long Term Support (until Apr. 2028) | [![scarthgap](https://img.shields.io/github/actions/workflow/status/dynamicdevices/meta-java/kas.yml?branch=scarthgap&label=build%20%26%20test)](https://github.com/DynamicDevices/meta-java/actions/workflows/kas.yml) |
 | kirkstone | 4.0       | Long Term Support (minimum Apr. 2024)  | [![master](https://img.shields.io/github/actions/workflow/status/dynamicdevices/meta-java/kas.yml?branch=kirkstone&label=build%20%26%20test)](https://github.com/DynamicDevices/meta-java/actions/workflows/kas.yml) |
 
