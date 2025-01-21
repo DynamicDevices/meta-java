@@ -58,6 +58,8 @@ into your test image. More information on image testing is available at:
  + Both, OpenJDK-7 and 8 doesn't support mips and mips64 machines
  + Further limitations are shown in the OpenJDK version/libc/target architecture
    support matrix below:
+
+```
    +--------+-----------------+-----------------+-----------------+
    |        | OpenJDK-7/glibc | OpenJDK-8/glibc | OpenJDK-8/musl  |
    +--------+-----------------+-----------------+-----------------+
@@ -73,6 +75,7 @@ into your test image. More information on image testing is available at:
    +--------+-----------------+-----------------+-----------------+
    | ppc    |    int. mode    |  build failure  |  build failure  |
    +--------+-----------------+-----------------+-----------------+
+```
 
 If you encounter any other problems or bugs please report them to our mailing
 list at yocto-patches@lists.yoctoproject.org.
