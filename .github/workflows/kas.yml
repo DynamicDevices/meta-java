@@ -29,11 +29,17 @@ jobs:
         mkdir -p sstate
         mv sstate sstate-cache
 
-    - name: Run kas on ${{ matrix.machine }} on ${{ matrix.yocto-version }}
+    - name: Run kas build on ${{ matrix.machine }} on ${{ matrix.yocto-version }}
       run: |
         export SSTATE_DIR="${PWD}/sstate"
         export SSTATE_MIRRORS="file://.* file://${PWD}/sstate-cache/PATH;downloadfilename=PATH"
         kas build kas/meta-java-${{ matrix.yocto-version }}.yml:kas/machine-${{ matrix.machine }}.yml:kas/ci.yml
+
+    - name: Run kas test on ${{ matrix.machine }} on ${{ matrix.yocto-version }}
+      run: |
+        export SSTATE_DIR="${PWD}/sstate"
+        export SSTATE_MIRRORS="file://.* file://${PWD}/sstate-cache/PATH;downloadfilename=PATH"
+        KAS_TASK=testimage kas build kas/meta-java-${{ matrix.yocto-version }}.yml:kas/machine-${{ matrix.machine }}.yml:kas/ci.yml
 
     - name: Save sstate cache
       id: cache-sstate-save
