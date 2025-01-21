@@ -12,7 +12,7 @@ jobs:
       options: --privileged --platform linux/amd64  -v /dev/net/tun:/dev/net/tun -v /dev/kvm:/dev/kvm
     strategy:
       matrix:
-        yocto-version: [master]
+        yocto-version: [styhead, master]
         machine: [qemu]
     steps:
     - uses: actions/checkout@v4
