@@ -1,10 +1,10 @@
-Upstream-Status: Backport
-
 This fixes undefined behaviour in boehm GC as suggested at
 https://github.com/ivmai/bdwgc/commit/16780405c899f01119bc45167122b4242f6b34fb.
 
 The undefined behaviour at very least causes a segmentation fault during
 classpath-native configure step.
+
+Upstream-Status: Backport
     
 Signed-off-by: Erkka Kääriä <erkka.kaaria@intel.com>
 

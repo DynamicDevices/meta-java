@@ -1,6 +1,8 @@
 on some arches we use lib64 for libdir so hardcoding to lib
 is not gonna work always
 
+Upstream-Status: Pending [ajlennon@dynamicdevices.co.uk]
+
 Signed-off-by: Khem Raj <raj.khem@gmail.com>
 
 Index: classpath-0.99/resource/Makefile.am
