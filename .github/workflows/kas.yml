@@ -21,7 +21,7 @@ jobs:
       options: --privileged --platform linux/amd64  -v /dev/net/tun:/dev/net/tun -v /dev/kvm:/dev/kvm
     strategy:
       matrix:
-        yocto-version: [master, styhead, scarthgap, kirkstone]
+        yocto-version: [master, styhead, scarthgap]
         java-version: [openjdk-8]
         machine: [qemuarm64, qemux86-64]
     steps:
