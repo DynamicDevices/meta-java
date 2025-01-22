@@ -1,5 +1,5 @@
 header:
   version: 14
 
-machine: qemuarm64
+machine: qemuarmx86-64
 distro: poky
