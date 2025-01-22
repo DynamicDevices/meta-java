@@ -2,6 +2,8 @@ From a0169a5569a0373558bd99143a02ba3ebe80b81b Mon Sep 17 00:00:00 2001
 From: Henning Heinold <heinold@inf.fu-berlin.de>
 Date: Sat, 12 Nov 2011 20:58:34 +0100
 
+Upstream-Status: Pending
+
 ---
  src/Makefile.am | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

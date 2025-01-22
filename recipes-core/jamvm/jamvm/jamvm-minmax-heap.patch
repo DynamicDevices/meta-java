@@ -2,6 +2,8 @@ From 2409bdf5de64f1a6f2d8d3c738b06d394b47c198 Mon Sep 17 00:00:00 2001
 From: Jan Luebbe <jlu@pengutronix.de>
 Date: Tue, 15 May 2012 09:56:31 +0000
 
+Upstream-Status: Pending
+
 ---
  src/jam.c | 4 +---
  1 file changed, 1 insertion(+), 3 deletions(-)
