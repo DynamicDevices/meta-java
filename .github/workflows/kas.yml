@@ -23,7 +23,7 @@ jobs:
       matrix:
         yocto-version: [master, styhead, scarthgap, kirkstone]
         java-version: [openjdk-7, openjdk-8]
-        machine: [qemuarm64]
+        machine: [qemuarm64, qemux86-64]
     steps:
     - uses: actions/checkout@v4
     - name: Restore sstate cache
