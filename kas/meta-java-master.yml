@@ -24,7 +24,7 @@ local_conf_header:
 
   preferred_providers: |
     # Possible provider: cacao-initial-native and jamvm-initial-native
-    PREFERRED_PROVIDER_virtual/java-initial-native = "cacao-initial-native"
+    PREFERRED_PROVIDER_virtual/java-initial-native = "jamvm-initial-native"
 
     # Possible provider: cacao-native and jamvm-native
     PREFERRED_PROVIDER_virtual/java-native = "jamvm-native"
