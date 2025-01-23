@@ -22,7 +22,7 @@ do_configure() {
 		-e "s|OE_STAGING_BINDIR|${bindir}|" \
 		-e "s|OE_STAGING_DATADIR_JAVA|${data_java}|" \
 		-e "s|OE_CUP_JAR|${BP}.jar|" \
-		${WORKDIR}/cup
+		${UNPACKDIR}/cup
 }
 
 do_compile() {
@@ -35,7 +35,7 @@ do_compile() {
 
 do_install:append() {
 	install -d ${D}${bindir}
-	install -m 0755 ${WORKDIR}/cup ${D}${bindir}
+	install -m 0755 ${UNPACKDIR}/cup ${D}${bindir}
 }
 
 PACKAGES = "${PN}"
