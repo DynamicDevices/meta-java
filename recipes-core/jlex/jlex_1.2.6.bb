@@ -24,7 +24,7 @@ do_configure() {
     -e "s|OE_STAGING_BINDIR|${bindir}|" \
     -e "s|OE_STAGING_DATADIR_JAVA|${datadir_java}|" \
     -e "s|OE_JLEX_JAR|${BP}.jar|" \
-    ${WORKDIR}/jlex
+    ${UNPACKDIR}/jlex
 }
 
 do_compile() {
