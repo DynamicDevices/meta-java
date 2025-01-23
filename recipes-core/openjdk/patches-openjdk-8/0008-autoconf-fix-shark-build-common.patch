@@ -3,6 +3,7 @@ From: Jens Rehsack <rehsack@gmail.com>
 Date: Thu, 2 Jan 2020 13:51:40 +0100
 Subject: [PATCH] autoconf: fix shark build (common)
 
+Upstream-Status: Pending
 Signed-off-by: Richard Leitner <richard.leitner@skidata.com>
 
 ---
