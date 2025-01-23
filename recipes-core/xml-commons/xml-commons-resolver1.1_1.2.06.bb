@@ -2,13 +2,13 @@ DESCRIPTION = "Library to resolve various public or system identifiers into acce
 AUTHOR = "Apache Software Foundation"
 LICENSE = "Apache-2.0"
 PR = "r1"
-LIC_FILES_CHKSUM = "file://LICENSE.resolver.txt;md5=d229da563da18fe5d58cd95a6467d584"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=d273d63619c9aeaf15cdaf76422c4f87"
 
 SRC_URI = "http://archive.apache.org/dist/xml/commons/source/xml-commons-external-${PV}-src.tar.gz"
 
 inherit java-library
 
-S = "${WORKDIR}/xml-commons-resolver-${PV}"
+S = "${WORKDIR}/xml-commons-external-${PV}"
 
 DEPENDS = "fastjar-native jaxp1.3"
 
@@ -36,6 +36,6 @@ do_compile() {
   fastjar cfm ${JARFILENAME} src/manifest.resolver -C build  org
 }
 
-SRC_URI[sha256sum] = "55dbe7bd56452c175320ce9a97b752252c5537427221323c72e9b9c1ac221efe"
+SRC_URI[sha256sum] = "2aafec42825d6e4193b667047b770f1aa9027dfcfc94742ca2d7ccefb6da714d"
 
 BBCLASSEXTEND = "native"
