@@ -40,7 +40,7 @@ EXTRA_OEMAKE = "JAVAC=${STAGING_BINDIR_NATIVE}/jikes-initial \
                "
 do_install:append() {
   install -d ${D}${bindir}/
-  install -m 0755 ${WORKDIR}/java-initial ${D}${bindir}/
+  install -m 0755 ${UNPACKDIR}/java-initial ${D}${bindir}/
 }
 
 SRC_URI[sha256sum] = "f329d1c8f42c06b53a3e82763d33900b100b8e9acd7afe02f7583c51253fd6e5"
