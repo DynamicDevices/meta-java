@@ -17,7 +17,8 @@ SRC_URI = "\
 	file://rhino-jsc \
 	"
 
-S = "${WORKDIR}/git"
+UNPACKDIR = "${WORKDIR}/sources"
+S = "${UNPACKDIR}/git"
 
 PACKAGES = "${JPN} rhino"
 
@@ -32,10 +33,10 @@ do_compile() {
 	# java.lang classes. :(
 	bcp_arg="-bootclasspath ${STAGING_DATADIR_NATIVE}/classpath/glibj.zip"
 
-	javac $bcp_arg -source 1.6 -sourcepath src -d build `find src -name "*.java"`
+	javac $bcp_arg -source 1.6 -sourcepath ${S}/src -d build `find src -name "*.java"`
 
 	mkdir -p build/org/mozilla/javascript/resources
-	cp src/org/mozilla/javascript/resources/*.properties build/org/mozilla/javascript/resources
+	cp ${S}/src/org/mozilla/javascript/resources/*.properties build/org/mozilla/javascript/resources
 
 	fastjar cfm ${JARFILENAME} ${S}/src/manifest -C build .
 }
@@ -43,6 +44,6 @@ do_compile() {
 do_install:append() {
 	install -d ${D}${bindir}
 
-	install -m 0755 ${WORKDIR}/rhino ${D}${bindir}
-	install -m 0755 ${WORKDIR}/rhino-jsc ${D}${bindir}
+	install -m 0755 ${UNPACKDIR}/rhino ${D}${bindir}
+	install -m 0755 ${UNPACKDIR}/rhino-jsc ${D}${bindir}
 }
