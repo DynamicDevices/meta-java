@@ -8,6 +8,8 @@ Fix a dependency for intermittent build failures, e.g.:
         import javax.security.auth.callback.Callback;
                ^^^^^^^^^^^^^^
 
+Upstream-Status: Pending
+
 Signed-off-by: Paul Barrette <paul.barrette@windriver.com>
 ---
  Makefile.am | 2 +-
