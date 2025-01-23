@@ -8,13 +8,14 @@ SRC_URI = "http://archive.apache.org/dist/xml/commons/source/xml-commons-externa
 
 inherit java-library
 
-S = "${WORKDIR}/xml-commons-external-${PV}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 DEPENDS = "fastjar-native jaxp1.3"
 
-do_unpackpost[dirs] = "${B}"
+do_unpackpost[dirs] = "${UNPACKDIR}"
 do_unpackpost() {
-  find src -exec \
+  find -name *.src -exec \
     sed -i -e "s|@impl.name@|XmlResolver|" \
            -e "s|@impl.version@|1.2|" {} \;
 }
