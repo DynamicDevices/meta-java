@@ -29,7 +29,7 @@ do_compile() {
   echo "PARENT_DIR=\`dirname \${CURRENT_DIR}\`" >> ecj-initial
 
   echo "ECJ_JAR=\${PARENT_DIR}/share/java/${JAR}" >> ecj-initial
-  echo "RUNTIME=java-initial" >> ecj-initial
+  echo "RUNTIME=\${SH_DIR}/java-initial" >> ecj-initial
   cat ecj-initial.in >> ecj-initial
 }
 
